@@ -14,7 +14,6 @@ export default function Home() {
       <Header />
       <Text />
       <BuyNow />
-      <Image className="navyur" src={Navy} alt="billede" width={450} height={450} />
       <Watches />
       <SiteNumber />
       <Colors />
