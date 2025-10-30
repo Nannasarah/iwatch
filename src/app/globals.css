@@ -1,0 +1,164 @@
+/* @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #c8dce5, #b6ccda);
+  min-height: 100vh;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  margin-inline: 8rem;
+}
+.appleicon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.header {
+  grid-column: 1 / 5; 
+  grid-row: 1 / 2; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding-bottom: 30px;
+  padding-top: 30px;
+  a {
+    text-decoration: none;
+    color: white;
+    margin-left: 3.5rem;
+    font-size: medium;
+  }
+  .iwatchheader {
+    background-color: white;
+    color: #b6ccda;
+    border-radius: 30px;
+    padding: 5px 30px 5px 30px;
+  }
+  .searchbag {
+    display: flex; /* gør indholdet til flex-items */
+    align-items: center; /* lodret centreret */
+    gap: 0.5rem; /* afstand mellem elementerne */
+  }
+  p {
+    color: white;
+    align-self: center;
+  }
+}
+.text {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 4rem;
+  align-self: center;
+  color: white;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+.buynow {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: start;
+  padding-bottom: 30px;
+
+  button {
+    background-color: transparent;
+    border: white solid 2px;
+    color: white;
+    border-radius: 40px;
+    padding: 20px 70px 20px 70px;
+    font-size: medium;
+  }
+  button:hover {
+    background-color: white;
+    color: #b6ccda;
+    cursor: pointer;
+  }
+}
+.navyur {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  padding-bottom: 40px;
+}
+.watches {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* sørger for at .boks ligger på bundlinjen */
+  align-self: end;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 20px;
+
+  .boks {
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .watch {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 30px;
+  }
+}
+.nb {
+  background-color: #434558;
+}
+.mb {
+  background-color: #6addcc;
+}
+.ob {
+  background-color: rgb(214, 241, 253);
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.sitenumber {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center; /* lodret centreret */
+  gap: 0.5rem; /* afstand mellem elementerne */
+  align-self: end;
+  margin-bottom: 30px;
+}
+.colors {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: white solid 2px;
+}
